@@ -59,6 +59,42 @@ body {
       gap: 2rem;
     }
   }
+
+  main {
+    .video-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: var(--color3);
+      padding: 4rem;
+      gap: 1rem;
+
+      .text-container {
+        .h2 {
+          font-size: 1.802rem;
+          font-family: Marker;
+          color: var(--color4);
+        }
+        h5,
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+
+      .video-container {
+        width: 100%;
+
+        video{
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 h1 {
@@ -77,6 +113,7 @@ h4 {
 }
 h5 {
   font-size: 1.266rem;
+  font-weight: 400;
 }
 h6 {
   font-size: 1.125rem;
