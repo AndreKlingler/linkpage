@@ -57,6 +57,20 @@ body {
     .icon-container {
       display: flex;
       gap: 2rem;
+
+      img {
+        cursor: pointer;
+        transition: 0.1s;
+
+        &:hover {
+          transform: scale(1.1);
+          border-bottom: 2px solid var(--color2);
+        }
+        &:active {
+          box-shadow: none;
+          transform: scale(1);
+        }
+      }
     }
   }
 
@@ -89,13 +103,13 @@ body {
       .video-container {
         width: 100%;
 
-        video{
+        video {
           width: 100%;
         }
       }
     }
 
-    .link-section{
+    .link-section {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -104,11 +118,56 @@ body {
       padding: 4rem 4rem 8rem 4rem;
       gap: 2rem;
 
-      .link-container{
-        background-color: var(--color3);
-        padding: 2rem;
+      .link-content{
         width: 100%;
-        border-radius: 1.25rem;
+
+        a{
+          color: var(--color1);
+          text-decoration: none;
+        }
+
+        .link-container {
+          background-color: var(--color3);
+          padding: 2rem;
+          width: 100%;
+          border-radius: 1.25rem;
+          box-shadow: 20px 20px 47px #09151f, -20px -20px 47px #11293b;
+          cursor: pointer;
+          transition: 0.4s;
+  
+          &:hover {
+            transform: scale(1.01);
+            background-color: var(--color4);
+          }
+          &:active {
+            background-color: var(--color2);
+          }
+        }
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--color2);
+    background-color: var(--black);
+    padding: 2rem;
+    gap: 1rem;
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+      .links {
+        display: flex;
+        gap: 1rem;
+        a {
+          color: var(--color2);
+        }
       }
     }
   }
@@ -143,17 +202,10 @@ small {
 }
 
 .container {
-  width: 95%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container {
-    width: 90%;
-  }
 }
 
 @media (min-width: 768px) {
@@ -165,9 +217,18 @@ small {
   }
 }
 
+@media (min-width: 850px) {
+  .container {
+    width: 80%;
+  }
+}
+
 @media (min-width: 992px) {
   html {
     font-size: 1.125rem;
+  }
+  .container {
+    width: 65%;
   }
 }
 
@@ -176,7 +237,7 @@ small {
     font-size: 1.15rem;
   }
   .container {
-    width: 80%;
+    width: 60%;
   }
 }
 
@@ -185,7 +246,7 @@ small {
     font-size: 1.2rem;
   }
   .container {
-    width: 70%;
+    width: 55%;
   }
 }
 
@@ -194,6 +255,6 @@ small {
     font-size: 1.2rem;
   }
   .container {
-    width: 60%;
+    width: 45%;
   }
 }
