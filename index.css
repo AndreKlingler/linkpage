@@ -94,6 +94,23 @@ body {
         }
       }
     }
+
+    .link-section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 4rem 8rem 4rem;
+      gap: 2rem;
+
+      .link-container{
+        background-color: var(--color3);
+        padding: 2rem;
+        width: 100%;
+        border-radius: 1.25rem;
+      }
+    }
   }
 }
 
